@@ -1,0 +1,16 @@
+
+<div class="flex-grow pa3 flex items-center f5 fw5 ttu avenir tr w-100 w-auto-ns truncate">
+
+  {% for item in site.data.topmenu %}
+
+  <a class="link dim blue dib mr3" 
+    href="{{ item.url }}"
+    title="{{ item.title | escape }}}">{{ item.title | escape }}</a>
+
+  {% endfor %}
+
+  <a class="dim no-underline shadow-4 f4 blue dib br3 bg-animate hover-bg-white hover-blue pv2 ph4 ba b--light-blue-20" href="#">
+    👉 S'inscrire
+  </a>
+
+</div>

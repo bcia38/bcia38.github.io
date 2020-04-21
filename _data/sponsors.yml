@@ -1,0 +1,18 @@
+- name: KVIK
+  url: https://www.kvik.fr/trouver-un-magasin/kvik-lyon---saint-bonnet-de-mure
+  logo: sponsor-KVIK.png
+- name: Crédit Mutuel
+  url: https://www.creditmutuel.fr
+  logo: sponsor-CCM.png
+- name: Fournisle
+  url: https://www.facebook.com/lefournisle
+  logo: sponsor-FOURNISLE-FB.jpg
+- name: L'Isle aux Vins
+  url: https://www.facebook.com/lisleauxvins
+  logo: sponsor-ISLEAUXVINS-FB.jpg
+- name: Mac Donald's
+  url: https://www.restaurants.mcdonalds.fr/mcdonalds-l-isle-d-abeau
+  logo: sponsor-McDonalds.png
+- name: Entrepot du Bricolage
+  url: https://isledabeau.entrepot-du-bricolage.fr/
+  logo: sponsor-EDB.jpg
