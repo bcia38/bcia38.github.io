@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/bcia-screen.css" | relative_url }}" />
+    <title>{{ page.title }}</title>
+    {% feed_meta %}
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+      {% include google-analytics.html %}
+    {% endif %}
+  </head>
+
+  <body class="w-100 avenir bg-washed-blue">
+    {% include header.html %}
+
+    <div class="w-100 fw5 o-80 white-90 bg-black">
+      <div class="measure center lh-copy tc">
+
+        {% for post in site.categories.epingle %}
+
+          <p class="pv1 ma0">
+            {{ post.excerpt | strip_html }}
+          </p>
+
+        {% endfor %}
+
+      </div>
+    </div>
+      
+    <main class="pv2 ph4 w-100">
+
+      <section class="fl w-100 w-75-ns" aria-label="content">
+        {{ content }}
+      </section>
+
+      <section class="fl w-100 w-25-ns">
+        {% include carousel.html height="100px" duration="7" %}
+      </section>
+
+    </main>
+
+    {% include footer.html %}
+  </body>
+
+</html>

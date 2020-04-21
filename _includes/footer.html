@@ -1,0 +1,25 @@
+<footer class="fixed fl w-100 bb bw3 bg-white">
+  <div class="w-100 bt b--black-30"></div>
+
+  <div class="center mw9 pa3 flex flex-column flex-wrap-m flex-row-ns">
+
+    <div class="flex-auto pv2 ph4-ns ph3 w-30-ns w-50-m">
+      <h3>À propos</h3>
+      <ul class="list pl0">
+
+        {% for post in site.categories.qui-sommes-nous %}
+
+          <li class="pv1"><a class="link" href="{{ post.url }}">{{ post.title }}</a></li>
+
+        {% endfor %}
+        
+      </ul>
+    </div>
+
+  </div>
+
+  <ul class="list mv2 fr pa0">
+    {% include social.html %}
+  </ul>
+
+</footer>

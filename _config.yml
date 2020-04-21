@@ -1,0 +1,59 @@
+title: BCIA 38
+email: info@lilotbad.fr
+toplogo: logo.png
+description: >- # this means to ignore newlines until "baseurl:"
+  Pratique de bad pour tous niveaux à l'Isle d'Abeau
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://bcia.lilotbad.fr" # the base hostname & protocol for your site, e.g. http://example.com
+facebook_username: bcia38
+instagram_username: bcia38
+rss: RSS
+google_analytics_id: #UA-XXXX-Y
+google_maps_javascript_api_key: "YOUR_GOOGLE_MAPS_API_KEY"
+
+# Build settings
+excerpt_separator: <!--more-->
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+exclude:
+  - README.md
+  - CODE_OF_CONDUCT.md
+
+collections:
+  - members
+  - teams
+
+defaults:
+  - scope:
+    path: ""
+    type: "posts"
+    values:
+    layout: "post"
+  - scope:
+    path: ""
+    type: "pages"
+    values:
+    layout: "page"
+  - scope:
+    path: ""
+    type: "member"
+    values:
+    layout: "member"
+  - scope:
+    path: ""
+    type: "teams"
+    values:
+    layout: "team"
+  - scope:
+    path: ""
+    type: "lilotbad"
+    values:
+    layout: "lilotbad"
+  - scope:
+    path: ""
+    values:
+    layout: "default"

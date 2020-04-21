@@ -1,0 +1,27 @@
+@import "tachyons";
+
+header, footer {
+  -o-border-image: linear-gradient(90deg, #04B3DE, #007ABD, #EB008D) 1;
+     border-image: linear-gradient(90deg, #04B3DE, #007ABD, #EB008D) 1;
+}
+
+footer {
+  bottom:0;
+  -webkit-font-smoothing:subpixel-antialiased;
+}
+
+nav a {
+  svg { fill: #EB008D}
+
+  .brand-image {
+    display: block;
+    height: 80px;
+  }
+}
+
+.svg-icon {
+  display:inline-block;
+  width:18px;
+  height:18px;
+  vertical-align: bottom;
+}
