@@ -10,7 +10,7 @@
     "standard": "*"
   },
   "scripts": {
-    "build:css": "copyfiles --flat ./node_modules/tachyons/css/*.css ./_sass",
+    "build:tachyons": "copyfiles --flat ./node_modules/tachyons/css/*.css ./assets",
     "test": "standard"
   },
   "repository": {
@@ -22,7 +22,7 @@
     "jekyll",
     "tachyons"
   ],
-  "author": "Grï¿½gory Bourgin",
+  "author": "Grégory Bourgin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bcia38/bcia38.github.io/issues"
