@@ -9,10 +9,34 @@
 
         {% for post in site.categories.qui-sommes-nous %}
 
-          <li class="pv1"><a class="link" href="{{ post.url }}">{{ post.title }}</a></li>
+          <li class="pv1"><a class="link dim near-black" href="{{ post.url }}">{{ post.title }}</a></li>
 
         {% endfor %}
         
+      </ul>
+    </div>
+    
+    <div class="flex-auto pv2 ph4-ns ph3 w-30-ns w-50-m">
+
+      <h3>Nos partenaires</h3>
+      <ul class="list pl0">
+        
+      </ul>
+    </div>
+    
+    <div class="flex-auto pv2 ph4-ns ph3 w-30-ns w-50-m">
+
+      <h3>Nos partenaires</h3>
+      <ul class="list pl0">
+        
+      </ul>
+    </div>
+
+    <div class="flex-auto pv2 ph4-ns ph3 w-30-ns w-50-m">
+
+      <h3>Restons en contact</h3>
+      <ul class="list pl0">
+        {% include social2.html %}
       </ul>
     </div>
 

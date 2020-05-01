@@ -1,20 +1,17 @@
 {%- if site.posts.size > 0 -%}
-  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
 
-  <ul class="post-list">
+  <ul class="list pl0">
     {%- for post in site.posts -%}
-    <li>
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <span class="post-meta">{{ post.date | date: date_format }}</span>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-        {{ post.excerpt }}
-      {%- endif -%}
-    </li>
+    <li class="pv2 bt b--black-20 dim">
+      <a class="link near-black" href="{{ post.url | relative_url }}">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="f6 i db">{{ post.date | date: date_format }}</span>
+        <b class="f3 lh-title">{{ post.title | escape }}</b>
+        {%- if site.show_excerpts -%}
+        <span class="f5 i db">{{ post.excerpt }}</span>
+        {%- endif -%}
+      </a>
+  </li>
     {%- endfor -%}
   </ul>
 

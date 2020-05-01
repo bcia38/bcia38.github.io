@@ -1,8 +1,32 @@
 
+:root{
+  --light-bg-color:#FAFBFB;
+}
+:root.lilotbad{
+  --light-bg-color:red;
+}
+
+#sponsors{background-color: var(--light-bg-color, #FAFBFB);}
+
 header, footer {
   -o-border-image: linear-gradient(90deg, #04B3DE, #007ABD, #EB008D) 1;
      border-image: linear-gradient(90deg, #04B3DE, #007ABD, #EB008D) 1;
 }
+
+.pinned{
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.pinned::before, .pinned::after{
+  content: "❗";
+  position: absolute;
+  font-size: 2.25rem;
+  top:0;bottom:0;
+  display: flex;align-items: center;
+}
+.pinned::before{left:0}
+.pinned::after{right:0}
 
 footer {
   bottom:0;
@@ -13,9 +37,19 @@ nav a {
   svg { fill: #EB008D}
 
   .brand-image {
-    display: block;
     height: 80px;
+    object-fit:cover;
+    object-position: left;
+    width: 50px;      
+
+    @media screen and (min-width: 50em) {
+      display: block;
+      object-fit:contain;
+      width:auto;
+    }
   }
+
+
 }
 
 .svg-icon {

@@ -21,20 +21,20 @@
     {% endif %}
   </head>
 
-  <body class="w-100 avenir bg-washed-blue">
+  <body class="w-100 avenir">
     {% include header.html %}
 
     <div class="w-100 fw5 o-80 white-90 bg-black">
       <div class="measure center lh-copy tc">
-
+        
         {% for post in site.categories.epingle %}
 
-          <p class="pv1 ma0">
-            {{ post.excerpt | strip_html }}
+          <p class="pv1 ma0 pinned">
+            {{ post.content | strip_html }}
           </p>
 
         {% endfor %}
-
+        
       </div>
     </div>
       
@@ -44,7 +44,7 @@
         {{ content }}
       </section>
 
-      <section class="pv2 ph4 w-100 bg-white">
+      <section id="sponsors" class="pv2 ph4 w-100 bg-white">
         {% include carousel.html height="200px" duration="7" %}
       </section>
 
