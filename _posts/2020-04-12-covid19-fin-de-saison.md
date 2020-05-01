@@ -2,7 +2,7 @@
 layout: post
 title:  "Fin de saison"
 date:   2020-04-12 11:57:10 +0100
-categories: epingle
+categories: [pin, news]
 ---
 
 <!--more-->
