@@ -2,15 +2,20 @@
 layout: default
 ---
 <article class="dt w-100">
-    <div class="dtc v-mid black-80 ph3 ph4-l f5 measure">
-        <h2 class="f2 lh-title">{{ page.title }}</h1>
+  <div class="dtc v-mid black-80 ph3 ph4-l f5 measure">
 
-        {{ content }}
-
-        <small class="i">{{ page.date | date: "%-d %B %Y" }}</small>
-        {% if page.tags %}
-          <small class="i">- tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-        {% endif %}
+    <div class="cf">
+      <h2 class="fl f2 lh-title mv3">{{ page.title }}</h2>
+      <div class="fr">
+        {% include share-buttons.html %}
+      </div>
     </div>
-  </article>
-  
+
+    {{ content }}
+
+    <small class="i">{{ page.date | date: "%-d %B %Y" }}</small>
+    {% if page.tags %}
+    <small class="i">- tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+    {% endif %}
+  </div>
+</article>
