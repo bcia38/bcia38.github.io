@@ -42,3 +42,12 @@
     </a>
   </li>
 {%- endif -%}
+
+{%- if include.type == "email" -%}
+  <li class="pv1">
+    <a class="link dim near-black" target="_blank" href="mailto:{{ include.name }}">
+      <svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#email' | relative_url }}"></use></svg>
+      <span>{{ include.name| escape }}</span>
+    </a>
+  </li>
+{%- endif -%}

@@ -1,5 +1,5 @@
 ---
 layout: home
-title: BCIA
+title: Bienvenue au BCIA !🏸
 ---
-home
+texte à remplir

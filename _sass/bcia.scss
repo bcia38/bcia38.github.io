@@ -7,13 +7,14 @@
 }
 :root.test2{
   --third-color:#0c00eb;
+  --secondary-color:#d0daef; 
 }
 
 #sponsors{background-color: var(--light-bg-color, #FAFBFB);}
 
 header, footer {
-  -o-border-image: linear-gradient(90deg, var(--primary-color, #04B3DE), var(--secondary-color,#007ABD), var(--third-color, #EB008D)) 1;
-  border-image: linear-gradient(90deg, var(--primary-color, #04B3DE), var(--secondary-color,#007ABD), var(--third-color, #EB008D)) 1;
+  -o-border-image: linear-gradient(90deg, var(--primary-color, #04B3DE), var(--secondary-color, #EB008D)) 1;
+  border-image: linear-gradient(90deg, var(--primary-color, #04B3DE), var(--secondary-color, #EB008D)) 1;
 }
 
 .pinned{
@@ -36,9 +37,13 @@ header, footer {
 footer {
   bottom:0;
   -webkit-font-smoothing:subpixel-antialiased;
+  background-color: var(--secondary-color, #DDD);
 }
 
-nav a {
+nav {
+  background-color: var(--secondary-color, #DDD);
+  
+  a {
   svg { fill: var(--third-color, #EB008D);}
 
   .brand-image {
@@ -53,6 +58,7 @@ nav a {
       width:auto;
     }
   }
+}
 
 
 }
