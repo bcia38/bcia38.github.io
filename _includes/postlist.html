@@ -4,9 +4,7 @@
     {%- for post in site.categories.news -%}
     <li class="pv2 bt b--black-20 dim">
       <a class="link near-black" href="{{ post.url | relative_url }}">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="f6 i db">{{ post.date | date: date_format }}</span>
-        <b class="f3 lh-title">{{ post.title | escape }}</b>
+        <b class="f3 lh-title">{{ post.title | escape }}</b><span class="f6 i db black-60">{{ post.date  | date: "%d/%m/%Y"}}</span>
         {%- if site.show_excerpts -%}
         <span class="f5 i db">{{ post.excerpt }}</span>
         {%- endif -%}

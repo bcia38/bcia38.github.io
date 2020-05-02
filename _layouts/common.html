@@ -8,7 +8,7 @@
     
     {% seo %}
     
-    <link rel="icon" type="image/png" href="{{ "assets/favicon/favicon-32x32.png" }}" >
+    <link rel="icon" type="image/png" href="{{ "assets/favicon/favicon-32x32.png" | relative_url }}" >
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}" >
     <link rel="stylesheet" href="{{ "/assets/tachyons.min.css" | relative_url }}" >
     <link rel="stylesheet" href="{{ "/assets/bcia-screen.css" | relative_url }}" >
@@ -24,15 +24,18 @@
   <body class="w-100 avenir">
     {% include header.html %}
 
-    <div class="w-100 fw5 o-80 white-90 bg-black">
-      <div class="measure center lh-copy tc">
+    <div class="w-100 fw5 o-80 bg-black">
+      <div class="lh-copy measure center">
         
         {% for post in site.categories.pin %}
 
-          <p class="pv1 ma0 pinned">
-            {{ post.excerpt | strip_html }}
-          </p>
-          <div>+ d'infos</div>
+          <div class="pv1 ma0 tc ">
+          
+            <a class="link dim white-90 pinned" href="{{ post.url }}">
+              {{ post.excerpt | strip_html }}
+            </a>
+
+          </div>
 
         {% endfor %}
         
@@ -45,8 +48,10 @@
         {{ content }}
       </section>
 
-      <section id="sponsors" class="pv2 ph4 w-100 bg-white">
-        {% include carousel.html height="200px" duration="3" %}
+      <section id="sponsors" class="pv2 ph4 bg-white">
+        <div class="w-100 w-50-l">
+          {% include carousel.html height="200px" duration="3" %}
+        </div>
       </section>
 
     </main>

@@ -20,8 +20,8 @@
 
       <h3>Ils nous soutiennent</h3>
       <ul class="list pl0">
-        {% for sponsor in site.data.subventions %}
-          <li class="pv1">{{sponsor.name}}</li>
+        {% for subvention in site.data.subventions %}
+          <li class="pv1"><a class="link dim near-black" href="{{ subvention.url }}">{{subvention.name}}</a></li>
         {% endfor %}
       </ul>
     </div>

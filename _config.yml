@@ -5,9 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Pratique de bad pour tous niveaux à l'Isle d'Abeau
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bcia.lilotbad.fr" # the base hostname & protocol for your site, e.g. http://example.com
-facebook_username: bcia38
-instagram_username: bcia38
-rss: RSS
+default_locale: "fr"
 google_analytics_id: #UA-XXXX-Y
 google_maps_javascript_api_key: "YOUR_GOOGLE_MAPS_API_KEY"
 
@@ -34,11 +32,6 @@ defaults:
     type: "posts"
     values:
     layout: "post"
-  - scope:
-    path: ""
-    type: "pages"
-    values:
-    layout: "page"
   - scope:
     path: ""
     type: "member"

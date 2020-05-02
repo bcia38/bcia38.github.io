@@ -17,22 +17,31 @@ header, footer {
   border-image: linear-gradient(90deg, var(--primary-color, #04B3DE), var(--secondary-color, #EB008D)) 1;
 }
 
+.highlighter-rouge {
+  padding: 5px;
+  background-color: var(--secondary-color, #DDD);
+}
+
 .pinned{
+  display:block;
   position: relative;
   padding-left: 30px;
   padding-right: 30px;
+
+  &::before, &::after{
+    content: "❗";
+    position: absolute;
+    font-size: 2.25rem;
+    top:0;bottom:0;
+    display: flex;
+    align-items: center;
+    filter: hue-rotate(200deg);
+  }
+  &::before{left:0}
+  &::after{right:0}
+
+  &:hover::before, &:hover::after{filter:none;}
 }
-.pinned::before, .pinned::after{
-  content: "❗";
-  position: absolute;
-  font-size: 2.25rem;
-  top:0;bottom:0;
-  display: flex;
-  align-items: center;
-  filter: hue-rotate(200deg);
-}
-.pinned::before{left:0}
-.pinned::after{right:0}
 
 footer {
   bottom:0;

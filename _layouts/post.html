@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: common
 ---
 <article class="dt w-100">
-  <div class="dtc v-mid black-80 ph3 ph4-l f5 measure">
+  <div class="dtc v-mid black-80 ph3 ph4-l f5">
 
     <div class="cf">
       <h2 class="fl f2 lh-title mv3">{{ page.title }}</h2>
@@ -11,10 +11,12 @@ layout: default
       </div>
     </div>
 
-    {{ content }}
+    <div class="measure">
+      {{ content }}
+    </div>
 
-    <small class="i">{{ page.date | date: "%-d %B %Y" }}</small>
-    {% if page.tags %}
+    <small class="i">{{ page.date | date: "%d/%m/%Y" }}</small>
+    {% if page.tags.size > 0 %}
     <small class="i">- tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
     {% endif %}
   </div>
