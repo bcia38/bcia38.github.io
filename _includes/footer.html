@@ -36,14 +36,14 @@
 
       <h3>Restons en contact</h3>
       <ul class="list pl0">
-        {% include social2.html %}
+        {% for rezo in site.data.social %}
+          {% capture rezotype %}{{rezo.type}}{% endcapture %}
+          {% capture rezoname %}{{rezo.name}}{% endcapture %}
+          {% include social2.html type=rezotype name=rezoname %}
+        {% endfor %}
       </ul>
     </div>
 
   </div>
-
-  <ul class="list mv2 fr pa0">
-    {% include social.html %}
-  </ul>
 
 </footer>
