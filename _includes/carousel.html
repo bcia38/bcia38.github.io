@@ -45,3 +45,17 @@
     </div>
 </div>
 
+<script>
+  document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+      window.setInterval(function(){
+
+        var radioList = document.querySelectorAll("input[name=carousel]");
+        var nextIndex = (Array.from(radioList.values()).findIndex(x => x.checked) + 1) % 6;
+        
+        radioList[nextIndex].checked = true;
+
+      }, {{include.duration}}*1000);
+    }
+  };
+</script>
