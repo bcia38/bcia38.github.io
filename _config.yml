@@ -17,6 +17,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
+  #- jekyll-google-calendar
 
 exclude:
   - README.md
@@ -28,26 +29,26 @@ collections:
 
 defaults:
   - scope:
-    path: ""
-    type: "posts"
+      path: ""
+      type: "posts"
     values:
-    layout: "post"
+      layout: "post"
   - scope:
-    path: ""
-    type: "member"
+      path: ""
+      type: "member"
     values:
-    layout: "member"
+      layout: "member"
   - scope:
-    path: ""
-    type: "teams"
+      path: ""
+      type: "teams"
     values:
-    layout: "team"
+      layout: "team"
   - scope:
-    path: ""
-    type: "lilotbad"
+      path: ""
+      type: "lilotbad"
     values:
-    layout: "lilotbad"
+      layout: "lilotbad"
   - scope:
-    path: ""
+      path: ""
     values:
-    layout: "default"
+      layout: "default"
