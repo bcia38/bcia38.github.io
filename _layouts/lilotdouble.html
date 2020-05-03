@@ -22,24 +22,7 @@
   </head>
 
   <body class="w-100 avenir">
-    {% include header.html %}
-
-    <div class="w-100 fw5 o-80 bg-black">
-      <div class="lh-copy measure center">
-        
-        {% for post in site.categories.pin %}
-
-          <div class="pv1 ma0 tc ">
-          
-            <a class="link dim white-90 pinned" href="{{ post.url }}">
-              {{ post.excerpt | strip_html }}
-            </a>
-
-          </div>
-
-        {% endfor %}
-        
-      </div>
+    {% include lilotdouble/header.html %}
     </div>
       
     <main class="w-100">
@@ -50,7 +33,7 @@
 
       <section id="sponsors" class="pv2 ph4 bg-white">
         <div class="w-100 w-50-l">
-          {% include carousel.html height="200px" duration="10" %}
+          {% include carousel.html height="200px" duration="3" %}
         </div>
       </section>
 

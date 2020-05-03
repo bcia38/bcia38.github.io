@@ -1,0 +1,18 @@
+<header class="w-100 bt bw3 bw4-ns" role="banner">
+
+  TEST
+  <div class="bt b--blue w-100 bg--white tr cf db-ns dn">
+    <ul class="list mv1 fr pa0 f6 flex flex-wrap">
+      {% include externals.html %}
+
+      {% for rezo in site.data.social %}
+        {% capture rezotype %}{{rezo.type}}{% endcapture %}
+        {% capture rezoname %}{{rezo.name}}{% endcapture %}
+        {% include social.html type=rezotype name=rezoname %}
+      {% endfor %}
+    </ul>
+  </div>
+
+</header>
+
+<div class="bt b--blue w-100"></div>

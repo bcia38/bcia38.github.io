@@ -1,13 +1,12 @@
 ﻿title: BCIA 38
-email: info@lilotbad.fr
-toplogo: logo.png
 description: >- # this means to ignore newlines until "baseurl:"
   Pratique de bad pour tous niveaux à l'Isle d'Abeau
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bcia.lilotbad.fr" # the base hostname & protocol for your site, e.g. http://example.com
-default_locale: "fr"
-google_analytics_id: #UA-XXXX-Y
-google_maps_javascript_api_key: "YOUR_GOOGLE_MAPS_API_KEY"
+
+timezone: Europe/Paris
+profile: true
+#livereload: true #doesn't work on Windows...
 
 # Build settings
 show_excerpts: true
@@ -24,31 +23,30 @@ exclude:
   - CODE_OF_CONDUCT.md
 
 collections:
-  - members
-  - teams
+  interclubs:
+    output: true
+    variable: test
 
 defaults:
+  - scope:
+      path: ""
+      type: "interclubs"
+    values:
+      layout: "common"
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
   - scope:
-      path: ""
-      type: "member"
-    values:
-      layout: "member"
-  - scope:
-      path: ""
-      type: "teams"
-    values:
-      layout: "team"
-  - scope:
-      path: ""
-      type: "lilotbad"
+      path: "lilotbad"
     values:
       layout: "lilotbad"
   - scope:
+      path: "lilotdouble"
+    values:
+      layout: "lilotdouble"
+  - scope:
       path: ""
     values:
-      layout: "default"
+      layout: "common"
